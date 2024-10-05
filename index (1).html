@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #3f8eb5;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #497aa1;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .kev{
+    justify-items: center;
+    align-items: center;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  .img {
+  width: 250px;
+  height: 200px;
+}
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>JASS Automotives</h1> 
+  <p>We specialize in Automotive Equipments   </p>  
+  <p>To know more enter your email address</p>
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-xl-8">
+      <div class="kev">
+      <img align= "left" src="https://autoprotoway.com/wp-content/uploads/2022/11/parts-of-a-car.jpg" alt= ""style="max-width: 650px"/> 
+      </div>
+      <h2 style="text-align:center;">About Company Page</h2><br>
+      <h4>We help clients improve productivity, strengthen innovation, and compete globally in a variety of markets.The changes currently taking place in the automotive-supplier industry from the need to go global to the emergence of new competitors in low-cost countries have increased business uncertainties and turned decision making that used to be straightforward into a much more complicated process.</h4><br>
+      <p>From new lighting technologies to breakthrough powertrain solutions, suppliers manage the frontlines in an attempt to find superior solutions for their OEM customers. They're also responsible for roughly 70 percent of the industry's costs, placing them front and center in the continuing effort to boost productivity.We help supplier companies in all the steps of the value chain. Our projects range from growth strategies and business-plan development to R&D topics such as material-cost optimization and supply-chain optimization, as well as sales and aftermarket processes. We help clients reduce capital intensity, optimize and standardize their specifications, and refine their approach to innovation and R&D investment. We also have perspectives on globalizing and localizing products, talent management, and corporate-finance topics.With dozens of dedicated consultants and experts around the world, we can address any question a supplier may have. In addition, we work with regional industry groups to maintain a cutting-edge perspective on the issues that matter most. And we invest in knowledge development to address key industry concerns. We apply a holistic view of the industry, assess aftermarket trends, and project potential scenarios for post sales business.</p>
+      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+    </div>
+    <div class="col-sm-4">
+      
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      
+    </div>
+    <div class="col-xl-8">
+      <img src="https://media.licdn.com/dms/image/D5612AQEDUDcu7Otl-w/article-cover_image-shrink_720_1280/0/1655080622287?e=2147483647&v=beta&t=DEYuoqxmN4zzGaHm7xD71R6bfmpusZYC_ZOwJrxYwas" style="max-width: 400px;" />
+      <h2 style="text-align:center;">Our Values</h2><br>
+      <h4><strong>MISSION:</strong>  Customers are the essence of our business and they remain our primary focus. Employees are our most valuable resource and it is our endeavour to help them in realizing their career goals, dreams and aspirations by providing a creative and flexible environment</h4><br>
+      <h4><strong>VISION:</strong> Be a global business partner in precision sheet metal stamping, welded assemblies & tool manufacturing</h4>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <img src="https://rukminim2.flixcart.com/image/850/1000/kovsvbk0/spark-plug/n/c/6/spark-plug-for-hero-honda-and-cd-bike-premium-quality-spark-plug-original-imag38quvhjgaqxh.jpeg?q=90&crop=false" style="max-width: 130px;" />
+      <h4>Spark Plugs</h4>
+
+    </div>
+    <div class="col-sm-4">
+      <img src="https://performance.bilstein.com/wp-content/uploads/2021/07/Gewindefahrwerk_Verstellbare-Zug-und-Druckstufe_Bilstein-EVO-T1.png" style="max-width: 100px;" />
+      <h4>Suspension</h4>
+     
+    </div>
+    <div class="col-sm-4">
+      <img src="https://projectkahn.com/cdn/shop/products/Type53_DiamondCut_2_3d8d4467-6f0a-47c1-b4af-02ee736ec82b_1024x1024.png?v=1643904910" style="max-width: 200px;" />
+      <h4>Wheels</h4>
+     
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <img src="https://cdn.jdpower.com/JDPA_GM%2010-Speed%20Automatic%20Transmission.jpg" style="max-width: 150px;" />
+      <h4>Transmission</h4>
+    
+    </div>
+    <div class="col-sm-4">
+      <img src="https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/teaser_720x406x2/dam/pnr/2022/Innovation/HD-Matrix-Scheinwerfer/gallery-new-1/Porsche_HD-Matrix_04.jpeg/jcr:content/Porsche_HD-Matrix_04.jpeg" style="max-width: 200px;" />
+      <h4>Headlights</h4>
+      
+    </div>
+    <div class="col-sm-4">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrPT56I2nx87htuYzxESjotKvOeJx1eU5jXg&s" style="max-width: 200px;" />
+      <h4>Battery</h4>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Other Services</h2><br>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://m.media-amazon.com/images/I/51gnPqGh0oL._SL500_.jpg" alt="Paris" width="400" height="300">
+        <p><strong>Car Cleaning Kits</strong></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="data:image/jpeg;base64,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G12hSB0sTRwjLuftO/8AFV8xl+wLbQNJAa0E5Aeiz68P06biNevTv09vi6Z3FrafJLTaTgIBtxN/IWWbqjP0ct893O24337xkpBT6nyzgXJYL3yHobqWQamRmFsOBl27pCOsM7nMbze675iJjEueOk5caPrIm08NLT3llbhbGC0izsJaHO4ZAnd+CtDQdCKeCOEG+FuZ+U45ud4uJKjererMVN1xd0lrY3bx2DkpXCVz7fbaehnl7z3mXrq6ttTuygV3BXiCvQFdDxegXK6hdgoBERAREQEREBcFcog83tWLJEs0hdHNQauSmC8HUoW2cxeTo1XC2Ws+CjkuPg62BjXUxqMLZa2SmB4KMab1Lp539I5nXta4U46FeL4VaIVmVSV+zv8Au3eBUa0jqZOwexcDMYf5K+3QLzNMOSlD5vkiLSQWkEdi6shc4gNaSSbZA8V9ICjb8keS9G045K2RT2idRJXWMmXeptonVaOIDIEqWtpwvRsCgayKiA4LNigAWUIF6siQeccayY2o2NerGKIJkAXoAgau4ClAAuy4suVAIiICIiAiIgIiIC4KIg6OXm5EQeaBEUjgrweiIl0XBREBchcogLu1EQegXdiIiHo1egRFA7BchcogIiICIiAiIgIiIP/Z" alt="New York" width="400" height="300">
+        <p><strong>Pressure Washers</strong></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://m.media-amazon.com/images/I/616Sqt4w6-L._AC_UF1000,1000_QL80_.jpg" alt="San Francisco" width="400" height="300">
+        <p><strong>Tire Inflator Kits</strong></p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>What our customers say</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+      </div>
+      <div class="item">
+        <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Choose a payment plan that works for you</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Basic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20</strong> Lorem</p>
+          <p><strong>15</strong> Ipsum</p>
+          <p><strong>5</strong> Dolor</p>
+          <p><strong>2</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$19</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Pro</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>50</strong> Lorem</p>
+          <p><strong>25</strong> Ipsum</p>
+          <p><strong>10</strong> Dolor</p>
+          <p><strong>5</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$29</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>100</strong> Lorem</p>
+          <p><strong>50</strong> Ipsum</p>
+          <p><strong>25</strong> Dolor</p>
+          <p><strong>10</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$49</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Tamil Nadu, India</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +91 9988774326</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
